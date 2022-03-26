@@ -2,6 +2,7 @@ import React from 'react';
 import {ProductList} from "./ProductList";
 import pic from "../images/home.jpg";
 
+
 export const Home = () => {
     return (
     <div>

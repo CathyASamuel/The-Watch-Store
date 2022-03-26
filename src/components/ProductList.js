@@ -67,42 +67,35 @@ useEffect(()=>{
 
     
 return(
-    
+      
+        <div>
+            <Navbar counter={cart.length}/>
+        
+            {list.map((watch, index) => {
+                return(<div key = { index } className="column"> 
+                    <h1> { watch.title } </h1>  
+                    <img width="200px" src={watch.img} alt="Watch"/>
+                    <h3> <label> Price: $ </label>
+                    {watch.price}</h3>
+                    <label> Quantity: </label>
+                    <button onClick={(event)=>updateQuantity(event,"-")}> - </button>
+            
+                    <span id={`quantity${index}`}>1</span>
+                    
+                    <button onClick={(event)=>updateQuantity(event,"+")}> + </button>  
+                    
+                    <button className = "btn" onClick={()=>addToCart(watch, `quantity${index}`)}> Add to Cart </button>                    
+                    <br/>                     
+                    <ShowMoreText>
+                        {watch.info}
+                        {watch.info2}
+                    </ShowMoreText>
+                    <hr/> 
+                    
+                </div>)
+})}      
+            
+        </div> 
 
-
-
-    <div>
-        <div> <Navbar counter={cart.length}/> </div>  
-            <div className = "column"> {
-            list.map((watch, index) => (
-             <div key = { index } className = "column">
-                <h1> { watch.title } </h1>  
-                <img width="200px" src={watch.img} alt="Watch"/>
-                <h3> <label> Price: $ </label>
-                {watch.price}</h3>
-                <label> Quantity: </label>
-                <button onClick={(event)=>updateQuantity(event,"-")}> - </button>
-     
-                <span id={`quantity${index}`}>1</span>
-                
-                <button onClick={(event)=>updateQuantity(event,"+")}> + </button>  
-                
-                <button className = "btn" onClick={()=>addToCart(watch, `quantity${index}`)}> Add to Cart </button>  
-                
-                
-                
-                <br></br> 
-                <ShowMoreText>
-                    {watch.info}  
-                    {watch.info2}
-                </ShowMoreText>
-                
-
-                
-                
-                </div>
-            ))
-    } 
-           </div>  
-    </div>
-)}
+)
+}
