@@ -74,7 +74,11 @@
     margin-left: 10px;
 }
 
-.button-style:hover{
+.button-style:hover, .remove-button:hover{
     background-color: burlywood;
     cursor:pointer
+}
+
+.remove-button{
+    cursor: pointer;
 }

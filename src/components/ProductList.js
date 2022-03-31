@@ -73,7 +73,7 @@ return(
         
             {list.map((watch, index) => {
                 return(<div key = { index } className="column"> 
-                    <h1> { watch.title } </h1>  
+                    <h3> { watch.title } </h3>  
                     <img width="200px" src={watch.img} alt="Watch"/>
                     <h3> <label> Price: $ </label>
                     {watch.price}</h3>

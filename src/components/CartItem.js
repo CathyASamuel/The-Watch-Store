@@ -11,10 +11,18 @@ export const CartItem = () => {
     
     const navigate = useNavigate();
 
-    const [show, setShow] = useState(true);
-    
+    const [show, setShow] = useState(false);
+    const [list, updateList] = useState(cart);
+
     let total = 0;
     let subTotal = 0;
+
+    const removeFromCart = (e) => {
+        const id = e.target.getAttribute("id");
+         updateList(list.filter(cart => cart.id !== id));
+       };
+
+
     if (cart.length === 0) {
         return(
         <span><h1>THIS CART IS EMPTY</h1>
@@ -33,7 +41,7 @@ export const CartItem = () => {
                             <p style = {{marginLeft:"10rem", width:"40em"}}>{watch.title}</p>
                             <p style = {{marginLeft:"1rem"}}>{watch.price}</p>
                             <p style = {{marginLeft:"1rem"}}>{watch.qty}</p>
-                            <p style = {{marginLeft:"1rem"}}><FaTrashAlt onClick = {removeFromCart}/></p>
+                            <p style = {{marginLeft:"1rem"}}><FaTrashAlt className = "remove-button" onClick = {removeFromCart}/></p>
                             <p style = {{marginLeft:"1rem"}}>${subTotal=watch.price * watch.qty}</p>
                         </div>
                         <div className="showSubTotal"> </div>
@@ -44,8 +52,7 @@ export const CartItem = () => {
                     <br/>
                   <div className="showTotal"><h2>GRAND TOTAL: ${total}</h2> </div>
                     <div>
-                        <button className = "button-style" onClick = {() => clearCart} >CLEAR CART</button>  
-                        <Modal show = {show}/>
+                        <button className = "button-style" onClick = {() => setShow(true)} >CLEAR CART</button>  
                         <Modal onClose = {() => setShow(false)} show = {show}/>
                     </div>
                         <div><button className = "button-style" onClick = {() => navigate('/')}>RETURN</button></div>
@@ -67,14 +74,3 @@ const CartColumns= () => {
     )
 }
 
-const clearCart = () => {
-     
-    return (
-        window.localStorage.getItem.removeItem("cart")
-    )
-}
-
-const removeFromCart = () => {
-    return(
-        window.localStorage.getItem.clear()
-        )}

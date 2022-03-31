@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/menu.css";
 
 
 export const Menu = () =>{
@@ -6,25 +7,27 @@ export const Menu = () =>{
     const menuItems = [
         {
             id: 1,
-            title: "List of Watches",
+            title: "Watches",
             link: "/",
             
         },
     
         {
             id: 2,
-            title: "Watches in Cart",
+            title: "Cart",
             link: "/cart",
         },
     ]
     
+   
+
 
     return(
-        <div className="menu">
-            {menuItems.map((submenu) => (
-            <div className="title">{submenu.title}</div>
+        <ul>
+            {menuItems.map((submenu, mid) => (
+            <li key = {mid}   className="title"><a href={submenu.link}>{submenu.title}</a></li>
             ))}
-        </div>
+        </ul>
     
     )
 }
