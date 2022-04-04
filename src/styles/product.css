@@ -30,3 +30,14 @@
     font-weight: 500;
 }
 
+@media screen and (max-width: 500px){
+    /* .list {
+         flex-direction: column;
+         height: auto;
+     }*/
+
+     .column {
+        display: inline-block;
+        width: 50%;
+    }
+    }
