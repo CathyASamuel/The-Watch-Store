@@ -10,8 +10,9 @@ export const Home = () => {
     
     return (
     <div>
-        <div><img className = "home-image" src={pic} alt='Shopping'/></div>;
-        <div><h1>Shop Now!</h1></div>;
+        <div><img className = "home-image" src={pic} alt='Shopping'/></div>
+        <div><h1>WATCHES FOR SALE</h1></div>
+        <div><h1>Shop Now!</h1></div>
         <hr/>
         <div><ProductList/></div>
     </div>

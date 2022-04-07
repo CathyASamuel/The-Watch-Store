@@ -50,8 +50,6 @@ export const Navbar =({counter}) => {
         
         </div>
         <span>
-        <div className="navtext"><h1>WATCHES FOR SALE</h1></div>
-    
         <div className="cart"><BsCart/></div>
         <div className="cartcounter">{counter}</div>
         <button className="seeCartButton" onClick={() => navigate("/cart")}>See Cart</button>
