@@ -1,0 +1,76 @@
+.cart{
+    display : flex;
+    vertical-align: top;
+    /* text-align : left;  */
+    /* align-items: flex-start; */
+    /* align-self: left; */
+    flex-direction: row;
+}
+
+.hideTotal{
+    display:none;
+}
+
+.showTotal{
+    text-decoration: double underline;
+}
+
+.showSubTotal{
+    text-decoration: underline;
+    font-style: italic;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.columnStyle{
+    display:flex;
+    width: 100%;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: brown;
+}
+.columnStyle div{
+    width: 100%;
+    position: relative;
+    text-align: left !important;
+    background-color: red;
+    padding: 5px;
+    font-weight: bold;
+}
+
+
+
+.column-image-style{
+    background-color: brown;
+    width:100px;
+}
+
+.button-style{
+    width: 200px;
+    height: 50px;
+    border-color: brown;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
+
+.button-style:hover, .remove-button:hover{
+    background-color: burlywood;
+    cursor:pointer
+}
+
+.remove-button{
+    cursor: pointer;
+}
+.float-left{
+    position: absolute !important;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 480px){
+    .columnStyle{
+
+    }
+}

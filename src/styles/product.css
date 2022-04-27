@@ -1,0 +1,46 @@
+.column {
+    display: inline-block;
+    width: 33%;
+}
+
+.column div{
+    height: 130px;
+    min-height: 130px;
+    margin: 20px;
+    
+}
+
+.btn {
+    border-radius: 20%;
+    color: brown;
+    background-color: white;
+    font-size: 16px;
+
+}
+
+.btn:hover{
+    cursor:pointer;
+}
+
+
+.read-more-link{
+    color:blueviolet;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.extra-content{
+    color: cornflowerblue;
+    font-weight: 500;
+}
+
+
+
+    @media screen and (max-width: 480px){
+        .column {
+            flex-direction: column;
+            width: 50%;
+            height: auto;
+        }
+    }
