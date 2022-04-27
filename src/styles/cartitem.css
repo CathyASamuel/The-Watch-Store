@@ -23,45 +23,25 @@
 
 .columnStyle{
     display:flex;
-    /* flex-direction: row; */
-    justify-content: space-around;
+    width: 100%;
     text-transform: uppercase;
     text-decoration: underline;
     text-decoration-color: brown;
 }
-
-.columnItemStyle{
-    display: flex;
-    /* flex-direction: row; */
-    /* flex-wrap: nowrap; */
-    justify-content: space-around;
-    /* align-self: flex-start; */
-    background-color: brown;
-    height: 150px;
-}
-
-.columnItemStyle>p {
+.columnStyle div{
+    width: 100%;
+    position: relative;
+    text-align: left !important;
+    background-color: red;
+    padding: 5px;
     font-weight: bold;
-    font-size: larger;
-    background: white;
-    width: 26.66%;
-    
 }
+
 
 
 .column-image-style{
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: calc(100%-20px);
-    align-self: flex-start;*/
-    background-color: brown; 
-    width: 200px;
-    height: 100px;
-    margin-left: 10rem ;
-    min-width: 10px;
-    margin-top: 10px;
+    background-color: brown;
+    width:100px;
 }
 
 .button-style{
@@ -81,4 +61,16 @@
 
 .remove-button{
     cursor: pointer;
+}
+.float-left{
+    position: absolute !important;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 480px){
+    .columnStyle{
+
+    }
 }

@@ -13,8 +13,13 @@
 .btn {
     border-radius: 20%;
     color: brown;
-    background_color: white;
-    font-size:
+    background-color: white;
+    font-size: 16px;
+
+}
+
+.btn:hover{
+    cursor:pointer;
 }
 
 
@@ -30,14 +35,12 @@
     font-weight: 500;
 }
 
-@media screen and (max-width: 500px){
-    /* .list {
-         flex-direction: column;
-         height: auto;
-     }*/
 
-     .column {
-        display: inline-block;
-        width: 50%;
-    }
+
+    @media screen and (max-width: 480px){
+        .column {
+            flex-direction: column;
+            width: 50%;
+            height: auto;
+        }
     }

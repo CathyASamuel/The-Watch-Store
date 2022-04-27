@@ -1,13 +1,13 @@
 import "../styles/modal.css";
 import {useCart} from "../Provider/Provider"
-//import { useEffect } from "react";
+import { useEffect } from "react";
  
 
-export const Modal= ({show}) => {
+export const Modal= ({onClose, show}) => {
 
-    const {setCart} = useCart();
+    const {cart, setCart} = useCart();
     
-    /*useEffect(()=>{
+    useEffect(()=>{
         if(show){
             setCart([]);
             window.localStorage.removeItem('cart');
@@ -15,19 +15,11 @@ export const Modal= ({show}) => {
         else{
             return null;
         }
-    }, [show])*/
+    }, [show])
 
-
-    const onClose = () => {
-    if(show){ 
-        setCart([]);
-        window.localStorage.removeItem('cart'); 
-        show=false
-    }}
-
-    const content = (show) && ( 
-         
-        <div className="modal" onClick={onClose}>
+    return(
+        
+        <div style={{display: !show && 'none'}} className="modal" onClick={onClose}>
             <div className="modal-content" onClick={e => e.stopPropagation()} >
                 <div className="modal-header">
                     <h4 className = "modal-title">
@@ -47,7 +39,6 @@ export const Modal= ({show}) => {
 
         </div>
     )
-        return content;
 }
 
 export default Modal;
