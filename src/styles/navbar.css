@@ -52,7 +52,7 @@
   font-size: 48px;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 600px){
   .menu-container {
       flex-direction: column;
       height: auto;

@@ -14,7 +14,7 @@ function App() {
           <CartWrapper>
               <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path= "/cart" element={<CartItem />}/>
+                <Route path= "/cart" element={<CartItem/>}/>
               </Routes>
           </CartWrapper>
       </BrowserRouter>

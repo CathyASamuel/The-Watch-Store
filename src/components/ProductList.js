@@ -88,7 +88,6 @@ return(
                     <br/>                     
                     <ShowMoreText>
                         {watch.info}
-                        {watch.info2}
                     </ShowMoreText>
                     <hr/> 
                     

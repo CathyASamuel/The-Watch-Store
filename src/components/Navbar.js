@@ -2,9 +2,7 @@ import {BsCart } from 'react-icons/bs';
 import {GiHamburgerMenu} from "react-icons/gi"
 import "../styles/navbar.css";
 import { useNavigate } from 'react-router-dom';
-import React, { useState, useRef, useEffect } from 'react';
-
-
+import React, { useState, useEffect } from 'react';
 
 export const Navbar =({counter}) => {
 
@@ -19,18 +17,17 @@ export const Navbar =({counter}) => {
     }    
     
     useEffect(() => {
-
       const changeWidth = () => {
         setScreenWidth(window.innerWidth);
       }
       return () => {
         window.addEventListener('resize', changeWidth)
       }
-    }, [])    
+    }, [screenWidth])    
   
     return (
       <nav className="navbar">
-        {(toggleMenu || screenWidth > 480) && (
+        {(toggleMenu || screenWidth > 600) && (
           <ul className = "menu-container">
             <li className="items" onClick={() => navigate("/")}>Home</li>
             <li className="items" onClick={() => navigate("/")}>Product</li>
@@ -42,7 +39,7 @@ export const Navbar =({counter}) => {
       <button onClick={toggleNav}><GiHamburgerMenu className="menu-btn"/></button>     
     </nav>
 )
-}
+};
 
 
 

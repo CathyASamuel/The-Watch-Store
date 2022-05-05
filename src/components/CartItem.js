@@ -17,10 +17,9 @@ export const CartItem = () => {
     let total = 0;
     let subTotal = 0;
 
+
     const removeFromCart = (item) => {
-        console.log(item, cart, list, );
-        setList(list.filter((cart) => item !== cart.id))
-        console.log(list.id, item)
+        setList(list.filter((cart) => item !== cart.id));
     };  
 
 
