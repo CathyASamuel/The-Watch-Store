@@ -33,7 +33,7 @@ export const Navbar =({counter}) => {
             <li className="items" onClick={() => navigate("/")}>Product</li>
             <li className="items" onClick={() => navigate("/cart")}>Cart</li>
             <li className="items" onClick={() => navigate("/cart")}><BsCart/></li>
-            <li className="items" style={{border: "0.1rem solid lightblue", width:"100px", height:"40px",margin_right:"40rem"}} onClick={() => navigate("/cart")}>{counter}</li>
+            <li className="items" style={{border: "0.1rem solid lightblue", width:"100px", height:"100px",margin_right:"40rem"}} onClick={() => navigate("/cart")}>{counter}</li>
           </ul>
         )}
       <button onClick={toggleNav}><GiHamburgerMenu className="menu-btn"/></button>     
