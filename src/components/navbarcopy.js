@@ -25,7 +25,7 @@ export const Navbar =({counter}) => {
     if (dropdownRef.current !== null && !dropdownRef.current.contains(e.target)) {
       setIsActive(!isActive);
     }
-      console.log(e);
+      
        }
       if (isActive) {
         window.addEventListener('click', pageClickEvent);

@@ -1,29 +1,18 @@
 import "../styles/modal.css";
 import {useCart} from "../Provider/Provider"
-//import { useEffect } from "react";
  
 
 export const Modal= ({show}) => {
 
     const {setCart} = useCart();
-    
-    /*useEffect(()=>{
-        if(show){
-            setCart([]);
-            window.localStorage.removeItem('cart');
-        }
-        else{
-            return null;
-        }
-    }, [show])*/
-
 
     const onClose = () => {
-    if(show){ 
-        setCart([]);
-        window.localStorage.removeItem('cart'); 
-        show=false
-    }}
+        if(show){ 
+            setCart([]);
+            window.localStorage.removeItem('cart'); 
+            show=false
+        }
+    }
 
     const content = (show) && ( 
          

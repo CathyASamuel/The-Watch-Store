@@ -4,10 +4,9 @@
 }
 
 .column div{
-    height: 130px;
+    height: 100%;
+    width: 100%;
     min-height: 130px;
-    margin: 20px;
-    
 }
 
 .btn {
@@ -37,7 +36,7 @@
 
 
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 600px){
         .column {
             flex-direction: column;
             width: 50%;

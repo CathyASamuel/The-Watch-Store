@@ -7,7 +7,7 @@
     min-width: 485px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .home-image {
               width: 5%;
               height:auto;
