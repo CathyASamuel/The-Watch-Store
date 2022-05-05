@@ -7,7 +7,7 @@ import { useState } from "react";
 
 
 export const CartItem = () => {
-    const {cart} = useCart();
+    const {cart, setCart} = useCart();
     
     const navigate = useNavigate();
 
@@ -19,7 +19,9 @@ export const CartItem = () => {
 
 
     const removeFromCart = (item) => {
-        setList(list.filter((cart) => item !== cart.id));
+        //setList(list.filter((cart) => item !== cart.id));
+        const tempCart = (list.filter((cart) => item !== cart.id));
+        setList([...tempCart]);
     };  
 
 
