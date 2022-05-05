@@ -16,10 +16,10 @@ export const CartWrapper = ({children}) => {
 
     useEffect(()=> {
         //window.localStorage.removeItem('cart')
-        if (cart.length){
+        //if (cart.length){
             window.localStorage.setItem('cart', JSON.stringify(cart));
             //const cartItem = window.localStorage.getItem('cart');
-        }
+        //}
     }, [cart]);
 
     
