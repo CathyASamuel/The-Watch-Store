@@ -1,20 +1,19 @@
-.home-image{
+.home-image {
     borderColor: red;
     borderWidth: 5;
     height: auto;
-    width: 50%;  
+    width: 50%;
     background-color: brown;
     min-width: 485px;
 }
 
 @media screen and (max-width: 600px) {
     .home-image {
-              width: 5%;
-              height:auto;
-              top: 5rem;
-              margin-top: 10rem;
-              background-color: aqua;
-              max-width: 480px;
-            }
-          
+        width: 200px;
+        height: 200px;
+        top: 5rem;
+        background-color: aqua;
+        margin: 50px 50px 10px 100px;
+        padding: 10px;
     }
+}
